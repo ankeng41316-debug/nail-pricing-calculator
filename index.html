@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ff8fa3" />
+    <title>美甲美睫報價計算機</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">專業美甲美睫</p>
+          <h1>報價計算機</h1>
+        </div>
+        <button class="ghost-btn" id="resetBtn" type="button">重置</button>
+      </header>
+
+      <main class="calculator">
+        <section class="panel">
+          <h2>1. 基礎款式</h2>
+          <div class="option-grid" id="baseOptions">
+            <label class="option-card selected">
+              <input type="radio" name="base" value="400" checked />
+              <span class="option-content">
+                <strong>單色</strong>
+                <small>NT$ 400</small>
+              </span>
+            </label>
+            <label class="option-card">
+              <input type="radio" name="base" value="500" />
+              <span class="option-content">
+                <strong>貓眼</strong>
+                <small>NT$ 500</small>
+              </span>
+            </label>
+            <label class="option-card">
+              <input type="radio" name="base" value="500" />
+              <span class="option-content">
+                <strong>漸層</strong>
+                <small>NT$ 500</small>
+              </span>
+            </label>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>2. 加價項目</h2>
+          <div class="counter-row">
+            <div class="label-wrap">
+              <span class="icon">🎨</span>
+              <span>跳色</span>
+            </div>
+            <div class="counter-box">
+              <button type="button" data-key="jumpColor" data-step="-1" class="count-btn">-</button>
+              <span class="count-value" id="jumpColor">0</span>
+              <button type="button" data-key="jumpColor" data-step="1" class="count-btn">+</button>
+            </div>
+          </div>
+
+          <div class="counter-row">
+            <div class="label-wrap">
+              <span class="icon">✏️</span>
+              <span>手繪</span>
+            </div>
+            <div class="counter-box">
+              <button type="button" data-key="art" data-step="-1" class="count-btn">-</button>
+              <span class="count-value" id="art">0</span>
+              <button type="button" data-key="art" data-step="1" class="count-btn">+</button>
+            </div>
+          </div>
+
+          <div class="counter-row">
+            <div class="label-wrap">
+              <span class="icon">💎</span>
+              <span>貼鑽</span>
+            </div>
+            <div class="counter-box">
+              <button type="button" data-key="diamond" data-step="-1" class="count-btn">-</button>
+              <span class="count-value" id="diamond">0</span>
+              <button type="button" data-key="diamond" data-step="1" class="count-btn">+</button>
+            </div>
+          </div>
+
+          <div class="counter-row">
+            <div class="label-wrap">
+              <span class="icon">🪞</span>
+              <span>鏡面</span>
+            </div>
+            <div class="counter-box">
+              <button type="button" data-key="mirror" data-step="-1" class="count-btn">-</button>
+              <span class="count-value" id="mirror">0</span>
+              <button type="button" data-key="mirror" data-step="1" class="count-btn">+</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>3. 延甲服務</h2>
+          <div class="two-col">
+            <div class="counter-row compact">
+              <div class="label-wrap column">
+                <span>本店</span>
+                <small>NT$ 100 / 隻</small>
+              </div>
+              <div class="counter-box">
+                <button type="button" data-key="extendHome" data-step="-1" class="count-btn">-</button>
+                <span class="count-value" id="extendHome">0</span>
+                <button type="button" data-key="extendHome" data-step="1" class="count-btn">+</button>
+              </div>
+            </div>
+
+            <div class="counter-row compact">
+              <div class="label-wrap column">
+                <span>他店</span>
+                <small>NT$ 150 / 隻</small>
+              </div>
+              <div class="counter-box">
+                <button type="button" data-key="extendOther" data-step="-1" class="count-btn">-</button>
+                <span class="count-value" id="extendOther">0</span>
+                <button type="button" data-key="extendOther" data-step="1" class="count-btn">+</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>4. 自訂與現場加價</h2>
+          <div id="customItemsContainer" class="custom-list"></div>
+
+          <div class="custom-entry">
+            <input id="customName" type="text" placeholder="項目名稱（例如：大鑽、造型）" maxlength="20" />
+            <input id="customPrice" type="number" min="0" placeholder="金額" />
+            <button id="addCustomBtn" type="button">新增</button>
+          </div>
+        </section>
+
+        <section class="total-panel">
+          <div class="summary-row">
+            <span>總計金額</span>
+            <strong id="totalPrice">NT$ 400</strong>
+          </div>
+          <div class="summary-detail" id="summaryDetail"></div>
+        </section>
+
+        <div class="action-row">
+          <button id="printBtn" class="primary-btn" type="button">列印報價</button>
+          <button id="shareBtn" class="secondary-btn" type="button">分享報價</button>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

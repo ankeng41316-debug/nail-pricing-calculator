@@ -1,2 +1,34 @@
-# nail-pricing-calculator
-Mobile-friendly nail and eyelash pricing calculator website
+# 美甲美睫報價計算機
+
+這是一個可直接在手機或電腦瀏覽器中使用的報價計算網站，適合美甲、美睫店家快速估價。
+
+## 功能
+
+- 基礎款式報價：單色 / 貓眼 / 漸層
+- 加價項目：跳色、手繪、貼鑽、鏡面
+- 延甲服務：本店 / 他店
+- 自訂項目：可新增現場加價項目
+- 即時計算：總金額會即時更新
+- 本地保存：可保留上次計算內容
+- 列印報價：支援直接列印
+- 分享報價：支援分享內容或複製價格
+- 手機優化：適合行動裝置使用
+
+## 使用方式
+
+1. 打開 GitHub Pages 網址：
+   https://ankeng41316-debug.github.io/nail-pricing-calculator/
+2. 選擇款式、調整數量、加入自訂項目
+3. 查看總計與報價明細
+4. 使用「列印報價」或「分享報價」功能
+
+## 專案結構
+
+- `index.html`：主頁面
+- `style.css`：手機優化樣式
+- `script.js`：計算邏輯、儲存與分享功能
+
+## 啟動方式
+
+直接在瀏覽器開啟 GitHub Pages 網址即可。
+
