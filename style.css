@@ -28,10 +28,7 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background:
-    radial-gradient(circle at top left, rgba(255,255,255,0.9), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(255, 210, 232, 0.95), transparent 25%),
-    linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 40%, var(--bg-3) 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #fef8f3 40%, #ede6d9 100%);
   color: var(--text);
 }
 
@@ -40,11 +37,27 @@ body::before {
   position: fixed;
   inset: 0;
   background-image:
-    radial-gradient(circle, rgba(255, 255, 255, 0.9) 0 2px, transparent 2px),
-    radial-gradient(circle, rgba(255, 180, 210, 0.35) 0 1.7px, transparent 2px);
-  background-size: 22px 22px;
-  background-position: 0 0, 11px 11px;
-  opacity: 0.45;
+    radial-gradient(circle, rgba(255, 200, 150, 0.25) 0 8px, transparent 8px),
+    radial-gradient(circle, rgba(255, 180, 200, 0.2) 0 12px, transparent 12px),
+    radial-gradient(circle, rgba(255, 220, 100, 0.15) 0 5px, transparent 5px),
+    radial-gradient(circle, rgba(200, 180, 255, 0.1) 0 15px, transparent 15px);
+  background-size: 120px 140px, 180px 160px, 90px 110px, 200px 180px;
+  background-position: 0 0, 40px 60px, 70px 30px, 20px 90px;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255, 240, 180, 0.3) 2px, transparent 2px),
+    radial-gradient(circle, rgba(220, 200, 150, 0.2) 3px, transparent 3px);
+  background-size: 60px 80px, 100px 120px;
+  background-position: 0 0, 30px 40px;
+  opacity: 0.4;
   pointer-events: none;
   z-index: 0;
 }
@@ -267,6 +280,7 @@ button {
   border-radius: 12px;
   padding: 11px 12px;
   color: var(--text);
+  transition: border-color 0.18s ease, outline-color 0.18s ease;
 }
 
 .coupon-box input:focus {
@@ -274,14 +288,22 @@ button {
   border-color: var(--pink-400);
 }
 
-.coupon-btn,
-.primary-btn,
-.custom-entry button {
+.coupon-hint {
+  margin-top: 6px;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.coupon-btn {
   background: linear-gradient(135deg, var(--pink-400), var(--pink-600));
   color: white;
   box-shadow: 0 8px 18px rgba(255, 139, 177, 0.22);
   padding: 0.8rem 1rem;
   font-weight: 800;
+}
+
+.coupon-btn:hover {
+  box-shadow: 0 10px 22px rgba(255, 139, 177, 0.32);
 }
 
 .coupon-status {
@@ -360,6 +382,15 @@ button {
   border-color: var(--pink-400);
 }
 
+.primary-btn,
+.custom-entry button {
+  background: linear-gradient(135deg, var(--pink-400), var(--pink-600));
+  color: white;
+  box-shadow: 0 8px 18px rgba(255, 139, 177, 0.22);
+  padding: 0.8rem 1rem;
+  font-weight: 800;
+}
+
 .secondary-btn {
   background: linear-gradient(180deg, #fff8fb, #ffeef6);
   color: var(--pink-600);
@@ -434,9 +465,15 @@ button {
     background: white;
   }
 
+  body::before,
+  body::after {
+    display: none !important;
+  }
+
   .ghost-btn,
   .count-btn,
   .custom-entry,
+  .coupon-panel,
   .coupon-box,
   .coupon-btn,
   .secondary-btn,
