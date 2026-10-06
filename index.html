@@ -98,35 +98,72 @@
 
         <section class="panel">
           <h2>3. 延甲服務</h2>
-          <div class="two-col">
-            <div class="counter-row compact">
-              <div class="label-wrap column">
-                <span>本店</span>
-                <small>NT$ 100 / 隻</small>
-              </div>
-              <div class="counter-box">
-                <button type="button" data-key="extendHome" data-step="-1" class="count-btn">-</button>
-                <span class="count-value" id="extendHome">0</span>
-                <button type="button" data-key="extendHome" data-step="1" class="count-btn">+</button>
-              </div>
+          <div class="counter-row">
+            <div class="label-wrap">
+              <span class="icon">💅</span>
+              <span>延甲 50元/隻</span>
             </div>
+            <div class="counter-box">
+              <button type="button" data-key="extend50" data-step="-1" class="count-btn">-</button>
+              <span class="count-value" id="extend50">0</span>
+              <button type="button" data-key="extend50" data-step="1" class="count-btn">+</button>
+            </div>
+          </div>
 
-            <div class="counter-row compact">
-              <div class="label-wrap column">
-                <span>他店</span>
-                <small>NT$ 150 / 隻</small>
-              </div>
-              <div class="counter-box">
-                <button type="button" data-key="extendOther" data-step="-1" class="count-btn">-</button>
-                <span class="count-value" id="extendOther">0</span>
-                <button type="button" data-key="extendOther" data-step="1" class="count-btn">+</button>
-              </div>
+          <div class="counter-row">
+            <div class="label-wrap">
+              <span class="icon">💅</span>
+              <span>延甲 100元/隻</span>
+            </div>
+            <div class="counter-box">
+              <button type="button" data-key="extend100" data-step="-1" class="count-btn">-</button>
+              <span class="count-value" id="extend100">0</span>
+              <button type="button" data-key="extend100" data-step="1" class="count-btn">+</button>
             </div>
           </div>
         </section>
 
         <section class="panel">
-          <h2>4. 自訂與現場加價</h2>
+          <h2>4. 修補與卸甲</h2>
+          <div class="counter-row">
+            <div class="label-wrap">
+              <span class="icon">🔧</span>
+              <span>修補</span>
+            </div>
+            <div class="counter-box">
+              <button type="button" data-key="repair" data-step="-1" class="count-btn">-</button>
+              <span class="count-value" id="repair">0</span>
+              <button type="button" data-key="repair" data-step="1" class="count-btn">+</button>
+            </div>
+          </div>
+
+          <div class="counter-row">
+            <div class="label-wrap">
+              <span class="icon">🗑️</span>
+              <span>卸甲 本店</span>
+            </div>
+            <div class="counter-box">
+              <button type="button" data-key="removeHome" data-step="-1" class="count-btn">-</button>
+              <span class="count-value" id="removeHome">0</span>
+              <button type="button" data-key="removeHome" data-step="1" class="count-btn">+</button>
+            </div>
+          </div>
+
+          <div class="counter-row">
+            <div class="label-wrap">
+              <span class="icon">🗑️</span>
+              <span>卸甲 他店</span>
+            </div>
+            <div class="counter-box">
+              <button type="button" data-key="removeOther" data-step="-1" class="count-btn">-</button>
+              <span class="count-value" id="removeOther">0</span>
+              <button type="button" data-key="removeOther" data-step="1" class="count-btn">+</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>5. 自訂與現場加價</h2>
           <div id="customItemsContainer" class="custom-list"></div>
 
           <div class="custom-entry">
@@ -154,4 +191,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
