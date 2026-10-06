@@ -173,6 +173,16 @@
           </div>
         </section>
 
+        <section class="panel coupon-panel">
+          <h2>6. 優惠券</h2>
+          <div class="coupon-box">
+            <input id="couponInput" type="text" placeholder="輸入折扣金額或百分比（例如：100 或 10%）" maxlength="20" autocomplete="off" />
+            <button id="applyCouponBtn" class="coupon-btn" type="button">套用</button>
+          </div>
+          <div id="couponStatus" class="coupon-status" aria-live="polite">未套用優惠券</div>
+          <div class="coupon-hint">輸入 100 折抵 NT$100；輸入 10% 打 9 折；留空並按套用可取消優惠券。</div>
+        </section>
+
         <section class="total-panel">
           <div class="summary-row">
             <span>總計金額</span>
