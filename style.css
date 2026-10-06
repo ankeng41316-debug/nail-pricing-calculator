@@ -269,6 +269,20 @@ button {
   color: var(--text);
 }
 
+.coupon-box input {
+  transition: border-color 0.18s ease, outline-color 0.18s ease;
+}
+
+.coupon-hint {
+  margin-top: 6px;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.coupon-btn:hover {
+  box-shadow: 0 10px 22px rgba(255, 139, 177, 0.32);
+}
+
 .coupon-box input:focus {
   outline: 2px solid rgba(255, 139, 177, 0.22);
   border-color: var(--pink-400);
@@ -437,6 +451,7 @@ button {
   .ghost-btn,
   .count-btn,
   .custom-entry,
+  .coupon-panel,
   .coupon-box,
   .coupon-btn,
   .secondary-btn,
