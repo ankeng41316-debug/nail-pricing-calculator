@@ -451,3 +451,13 @@ button {
     border: 1px solid #ddd;
   }
 }
+
+.coupon-status {
+  margin: 8px 0 0;
+  font-size: 0.9rem;
+  color: #d6336c;
+}
+
+.custom-entry.coupon-entry {
+  grid-template-columns: 1fr auto;
+}
