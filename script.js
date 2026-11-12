@@ -5,6 +5,7 @@ const defaultCounts = {
   art: 0,
   diamond: 0,
   mirror: 0,
+  french: 0,
   extend50: 0,
   extend100: 0,
   repair: 0,
@@ -157,9 +158,10 @@ function calculateTotal() {
   subtotal += counts.art * 50;
   subtotal += counts.diamond * 50;
   subtotal += counts.mirror * 50;
+  subtotal += counts.french * 75;
   subtotal += counts.extend50 * 50;
   subtotal += counts.extend100 * 100;
-  subtotal += counts.repair * 50;
+  subtotal += counts.repair * 25;
   subtotal += counts.removeHome * 100;
   subtotal += counts.removeOther * 150;
 
@@ -187,6 +189,9 @@ function calculateTotal() {
   if (counts.mirror > 0) {
     detailLines.push(`鏡面：${counts.mirror} × 50 = ${formatCurrency(counts.mirror * 50)}`);
   }
+  if (counts.french > 0) {
+    detailLines.push(`法式：${counts.french} × 75 = ${formatCurrency(counts.french * 75)}`);
+  }
   if (counts.extend50 > 0) {
     detailLines.push(`延甲 50元/隻：${counts.extend50} × 50 = ${formatCurrency(counts.extend50 * 50)}`);
   }
@@ -194,7 +199,7 @@ function calculateTotal() {
     detailLines.push(`延甲 100元/隻：${counts.extend100} × 100 = ${formatCurrency(counts.extend100 * 100)}`);
   }
   if (counts.repair > 0) {
-    detailLines.push(`修補：${counts.repair} × 50 = ${formatCurrency(counts.repair * 50)}`);
+    detailLines.push(`修補：${counts.repair} × 25 = ${formatCurrency(counts.repair * 25)}`);
   }
   if (counts.removeHome > 0) {
     detailLines.push(`卸甲 本店：${counts.removeHome} × 100 = ${formatCurrency(counts.removeHome * 100)}`);
